@@ -1,10 +1,10 @@
 import prisma from '../config/db.js';
 
-export async function findAll() {
+export async function findAllTasks() {
   return prisma.task.findMany();
 }
 
-export async function create(data) {
+export async function createTask(data) {
   return prisma.task.create({
     data,
   });
